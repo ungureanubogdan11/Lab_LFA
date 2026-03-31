@@ -1,0 +1,20 @@
+tema 1 lfa
+de facut:
+un dfa, un nfa, un lambda_nfa
+bonus: minimization lambda_nfa -> dfa
+input: fisier sintaxa custom
+ex: input.lfa.     q0, q1, q2, ... qn;
+                   a b c
+                   q0
+                   q1, q3, q4
+
+output: a: q3
+        ab: q7
+        abb: Nu exista tranzitie
+        Respins
+
+tema 1: primesc la input un automat si niste cuvinte
+verific pentru fiecare daca este in limbaj si afisez parsarea pentru fiecare cuvant
+bonus: generat primele N cuvinte (idee)
+de implementat si litere formate din mai multe caractere (ex: {a, aa, aac})
+se alege litera cu cele mai multe caractere 
