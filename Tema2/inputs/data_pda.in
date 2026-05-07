@@ -1,7 +1,16 @@
-2 1 1
-0 Z
-1 1
-1
-0 a Z 1 Z
-a
-b
+3 0 Z
+1 2
+11
+0 a Z 0 AZ
+0 b Z 0 BZ
+0 a A 0 AA
+0 b B 0 BB
+0 a B 0 AB
+0 b A 0 BA
+0 a A 1 L
+0 b B 1 L
+1 a A 1 L
+1 b B 1 L
+1 L Z 2 L
+abaaba
+ababa

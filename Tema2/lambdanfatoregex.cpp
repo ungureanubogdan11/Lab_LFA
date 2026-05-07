@@ -31,6 +31,8 @@ string reunite(string r1, string r2) {
     return "(" + r1 + "|" + r2 + ")";
 }
 
+
+
 void solve() {
     if (!(fin >> nr_stari >> nr_litere)) return;
     for (int i = 0; i < nr_litere; ++i) {

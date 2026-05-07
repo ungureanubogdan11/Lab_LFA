@@ -1,1 +1,1 @@
-((a|b))*ab
+((lambda|a)((lambda|a))*bc*|(lambda|a)((lambda|a))*cb*)

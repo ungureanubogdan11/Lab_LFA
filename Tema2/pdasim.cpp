@@ -27,6 +27,7 @@ vector<Muchie> muchii[1001];
 bool ruleaza_pda(int stare_ac, int poz_cuvant, string cuvant, stack<char> stiva) {
     if (poz_cuvant == cuvant.length()) {
         if (este_finala[stare_ac]) return true;
+        if (stiva.empty()) return true;
     }
 
     for (auto& m : muchii[stare_ac]) {
@@ -57,16 +58,15 @@ bool ruleaza_pda(int stare_ac, int poz_cuvant, string cuvant, stack<char> stiva)
 }
 
 int main() {
-    int alfabet_size, stiva_alfabet_size, nr_muchii;
-    fin >> nr_stari >> alfabet_size >> stiva_alfabet_size;
-    fin >> stare_start >> simbol_initial_stiva;
+    if (!(fin >> nr_stari >> stare_start >> simbol_initial_stiva)) return 0;
     
     fin >> nr_finale;
     for (int i = 0; i < nr_finale; i++) {
         int f; fin >> f;
         este_finala[f] = true;
     }
-
+    
+    int nr_muchii;
     fin >> nr_muchii;
     for (int i = 0; i < nr_muchii; i++) {
         int u, v; char in, top; string rez;
@@ -77,7 +77,8 @@ int main() {
     string cuvant_test;
     while (fin >> cuvant_test) {
         stack<char> s;
-        s.push(simbol_initial_stiva);
+        s.push(simbol_initial_stiva); 
+        
         if (ruleaza_pda(stare_start, 0, cuvant_test, s)) fout << "DA\n";
         else fout << "NU\n";
     }
